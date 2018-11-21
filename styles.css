@@ -6,7 +6,7 @@ body {
 
 h1 {
     text-align: center;
-    font-size: 50px;
+    font-size: 100px;
 }
 
 #drumBoard {
@@ -38,5 +38,7 @@ p {
 }
 
 .clicked {
-    width: 200px;
+    position: relative;
+    bottom: 20px;
+    margin: 0;
 }
