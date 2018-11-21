@@ -37,18 +37,25 @@ l: {
 }
 }
 
+
+var allImgs = document.querySelectorAll("img")
 window.addEventListener("keydown", keyboardPress);
-window.addEventListener("keyup", keyboardPress);
 
 function keyboardPress(event){
-    //letter
-    var keyPress = event.key
+    var letter = event.key
+    var img = document.getElementById(letter)
 
-    //number
-    var final = keys[keyPress].num;
+    //adds class
+    img.classList.add("clicked");
+    new Audio('sounds/' + keys[letter].urls + '.mp3').play();
 
-    var entry = document.getElementById(keyPress)
-    entry.classList.toggle("clicked");
-    //new Audio('sounds/' + keyPress + '.mp3').play();
-    new Audio('sounds/' + keys[keyPress].urls + '.mp3').play();
+    //adds event listener to each image
+    for(var i = 0; i < 9; i++){
+        allImgs[i].addEventListener("transitionend", removeClass);
+    }
+
+    //removes class
+    function removeClass(){
+        img.classList.remove("clicked")
+    }
 }
