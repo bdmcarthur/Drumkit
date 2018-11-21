@@ -36,3 +36,7 @@ p {
     font-size: 30px;
     font-weight: bold;
 }
+
+.clicked {
+    width: 200px;
+}
