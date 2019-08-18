@@ -1,19 +1,22 @@
+
+
 body {
-    background-image: url("background.jpg");
-    background-size: 90em;
+    background-image: url("images/home-header.jpg");
+    background-size: cover;
     font-family: 'VT323', monospace;
 }
 
 h1 {
     text-align: center;
-    font-size: 100px;
+    font-size: 200px;
+    margin: 60px auto;
 }
 
 #drumBoard {
-    width: 100%;
+    width: 98%;
     height: 200px;
-    margin-top: 90px;
     text-align: center;
+    margin: 50px auto 0 auto;
 }
 
 .key {
@@ -21,10 +24,11 @@ h1 {
     margin: 26px 0 0 0;
     text-align: center;
     transition: all .02s;
+    width: 10%;
 }
 
 img {
-    width: 150px;
+    width: 100%;
 }
 
 p {
@@ -42,3 +46,27 @@ p {
     box-shadow: red;
     transition: all .15s;
 }
+
+
+@media (min-width: 320px) and (max-width: 768px) {
+  h1 {
+    font-size: 4.5em;
+    margin: 1rem auto 0 auto;
+    }
+    
+    #drumBoard {
+    margin: 0 auto;
+    height: 80%vh;
+}
+
+.key {
+    transition: all .05s;
+    width: 30%;
+    margin-top: 30px;
+}
+
+p {
+    display: none;
+
+    
+  }
